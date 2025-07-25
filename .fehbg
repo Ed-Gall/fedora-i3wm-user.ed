@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-scale '/home/edgall/Imagens/Wallpaper/wallhaven-856dlk.png' 

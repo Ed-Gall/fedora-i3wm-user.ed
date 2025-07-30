@@ -201,7 +201,7 @@ exec_always xrandr --output DP-0 --primary --left-of DP-2
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # feh (wallpaper service)
-exec_always --no-startup-id feh --bg-scale /home/edgall/Imagens/Wallpaper/wallhaven-856dlk.png
+exec_always --no-startup-id feh --bg-scale [caminho/do/seu/wallpaper].png
 
 # picom (compositor, for transparency)
 exec_always --no-startup-id picom &

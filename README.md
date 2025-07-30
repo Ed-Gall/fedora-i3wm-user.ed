@@ -13,6 +13,12 @@ sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-rele
 sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 ```
 
+Também faça a instalação do fuse, alguns appimage pode precisar.
+
+```bash
+sudo dnf install fuse-libs-2.9.9
+```
+
 ---
 
 ## 2. Instalar o Flatpak e adicionar o repositório Flathub
@@ -57,3 +63,14 @@ sudo dnf install bibata-cursor-themes
 ---
 
 > Após instalar os temas, use ferramentas como `lxappearance`. A maioria estão pré-configuradas nos arquivos deste repositório.
+
+## Wallpaper com `feh`
+
+O [`feh`](https://feh.finalrewind.org/) é o visualizador de imagens que o i3 no fedora usa para definir wallpapers.
+
+Modifique a seguinte linha no seu arquivo `~/.config/i3/config`:
+
+```bash
+# feh (serviço de wallpaper)
+exec_always --no-startup-id feh --bg-scale /caminho/para/sua/imagem.png
+```

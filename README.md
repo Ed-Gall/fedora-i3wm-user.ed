@@ -64,7 +64,7 @@ sudo dnf install bibata-cursor-themes
 
 > Após instalar os temas, use ferramentas como `lxappearance`. A maioria estão pré-configuradas nos arquivos deste repositório.
 
-## Wallpaper com `feh`
+## 5. Wallpaper com `feh`
 
 O [`feh`](https://feh.finalrewind.org/) é o visualizador de imagens que o i3 no fedora usa para definir wallpapers.
 
@@ -73,4 +73,17 @@ Modifique a seguinte linha no seu arquivo `~/.config/i3/config`:
 ```bash
 # feh (serviço de wallpaper)
 exec_always --no-startup-id feh --bg-scale /caminho/para/sua/imagem.png
+```
+## 6. VS Code
+
+```bash
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+sudo dnf install code
+```
+
+## 7. Tex
+
+```bash
+sudo dnf install texlive-scheme-full
 ```

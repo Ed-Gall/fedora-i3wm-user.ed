@@ -48,17 +48,28 @@ cd Tela-icon-theme
 
 ## 4. Instalar tema de cursor Bibata
 
-### Manualmente
 ```bash
-git clone https://github.com/ful1e5/Bibata_Cursor.git
+cd /tmp
+wget https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.7/Bibata-Modern-Classic.tar.xz
 ```
 
-### Ou via COPR
+Extraia o arquivo:
 
 ```bash
-sudo dnf copr enable peterwu/rendezvous
-sudo dnf install bibata-cursor-themes
+tar -xJf Bibata-Modern-Classic.tar.xz
 ```
+Crie a pasta de temas de ícones:
+
+```bash
+mkdir -p ~/.local/share/icons
+```
+
+```bash
+mv Bibata-Modern-Classic ~/.local/share/icons/
+```
+
+
+
 
 ---
 
@@ -109,3 +120,46 @@ Coloque exatamente e depois salve:
 useX11LegacyScreenshot=true
 ```
 
+## 10. Polybar não iniciando
+
+Dê permissão de execução:
+
+```bash
+chmod +x ~/.config/polybar/launch.sh
+```
+
+## 11. Wallpaper no LightDM
+
+Antes de tudo, mova o wallpaper para uma pasta onde o LightDM tenha permissão, eu recomendo: /usr/share/backgrounds
+
+Execute:
+
+```bash
+grep -E 'greeter-session|user-session' /etc/lightdm/lightdm.conf
+```
+
+```bash
+ls /usr/share/xgreeters/
+```
+
+Se aparecer lightdm-gtk-greeter.desktop, você utiliza o GTK Greeter.
+
+```bash
+sudo nano /etc/lightdm/lightdm-gtk-greeter.conf
+```
+
+Configuração do greeter:
+
+```bash
+[greeter]
+
+background=[sua imagem].png
+
+theme-name=Arc-Dark
+
+icon-theme-name=Adwaita
+
+font-name=Noto Sans 10
+
+xft-antialias=true
+```

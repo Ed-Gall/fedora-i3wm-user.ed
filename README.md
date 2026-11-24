@@ -84,6 +84,12 @@ Mova o tema para o diretório:
 mv Bibata-Modern-Classic ~/.local/share/icons/
 ```
 
+Por fim, execute:
+
+```bash
+xrdb -merge ~/.Xresources
+```
+
 > Após instalar os temas, utilize ferramentas como o `lxappearance` para
 > selecionar e configurar a aparência. A maioria das opções visuais já
 > está pré-configurada nos arquivos deste repositório.

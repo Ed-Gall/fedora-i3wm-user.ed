@@ -198,7 +198,7 @@ exec_always xrandr --output DP-2 --right-of DP-0
 exec_always xrandr --output DP-0 --primary --left-of DP-2
 
 # polybar (customizable toolbar)
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # feh (wallpaper service)
 exec_always --no-startup-id feh --bg-scale [caminho/do/seu/wallpaper].png

@@ -87,3 +87,8 @@ sudo dnf install code
 ```bash
 sudo dnf install texlive-scheme-full
 ```
+# **8. Tema Arc-Dark**
+
+```bash
+sudo dnf install arc-theme gtk-murrine-engine lxappearance
+```

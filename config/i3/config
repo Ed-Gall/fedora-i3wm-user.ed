@@ -206,6 +206,9 @@ exec_always --no-startup-id feh --bg-scale [caminho/do/seu/wallpaper].png
 # picom (compositor, for transparency)
 exec_always --no-startup-id picom &
 
+# Carregar configurações do cursor
+exec_always --no-startup-id xrdb -merge ~/.Xresources
+
 # simplify window borders
 hide_edge_borders both
 default_border pixel 1
@@ -261,3 +264,12 @@ bindsym Mod1+h exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 # tela
 exec --no-startup-id xset s 3600 3600
 exec --no-startup-id xset dpms 3600 3600 3600
+
+#Controle de brilho
+
+# Diminuir brilho - F5
+bindsym F5 exec brightnessctl set 5%-
+
+# Aumentar brilho - F6
+bindsym F6 exec brightnessctl set +5%
+

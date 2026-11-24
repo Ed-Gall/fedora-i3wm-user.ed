@@ -87,8 +87,25 @@ sudo dnf install code
 ```bash
 sudo dnf install texlive-scheme-full
 ```
-# **8. Tema Arc-Dark**
+## 8. Tema Arc-Dark
 
 ```bash
 sudo dnf install arc-theme gtk-murrine-engine lxappearance
 ```
+## 9. Problema com flameshot
+
+lameshot v14 ou superior está tentando usar o XDG Desktop Portal, mas seu i3wm não disponibiliza o serviço de captura necessário.
+
+```bash
+mkdir -p ~/.config/flameshot
+nano ~/.config/flameshot/flameshot.ini
+```
+
+Coloque exatamente e depois salve:
+
+
+```bash
+[General]
+useX11LegacyScreenshot=true
+```
+
